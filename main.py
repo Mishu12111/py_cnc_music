@@ -23,8 +23,34 @@ for i in range(enumerare.count):
             time.sleep(1) # se verifica valorile la fiecare 6 secunde
             now = time.gmtime()
             print("acesta este i: ",i)
-            if (now[3]  == 20):
-                if(now[4]%2 == 0):
+
+            if (now[3]  == 6+i):
+                if (now[3] == 17):
+                    if (now[4] == 0 or now[4] == 55):
+                        for m in range(enumerare.count - i):
+                            for j in range(2):
+                                print("j este :", j)
+                                print("acesta este k:",k)
+                                audio = MP3(f'Music/{j+k}.mp3')
+                                print("sa inceapa muzica")
+                                pauza = int(audio.info.length)
+                                mixer.music.load(f'Music/{j + k }.mp3')
+                                mixer.music.play()
+                                time.sleep(pauza)
+                                timp += int(audio.info.length)
+                                n += 1
+                                if (timp < 460 and n == 2):
+                                    print("test timp mai mic n=2")
+                                    mixer.music.load(f'Music/{j + k + 1}.mp3')
+                                    mixer.music.play()
+                                    time.sleep(600 - timp)
+                                    print(i)
+                                elif(timp > 610 and n == 1):
+                                    print("test timp > n = 1")
+                                    mixer.music.load(f'Music/{j + k + 1}.mp3')
+                                    mixer.music.play()
+                                    time.sleep(600 - timp)
+                if(now[4] == 45 - ( i * 5 ) ) :
                         for j in range(2):
                             print("j este :", j)
                             print("acesta este k:",k)
