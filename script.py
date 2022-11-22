@@ -75,9 +75,8 @@ for i in range(enumerare.count + 1):
                                 print(i)
                                 k += 1
                             elif(timp > 610 and n == 1):
-                                print("test timp > n = 1")
-                                mixer.music.load(f'Music/{j + k + 1}.mp3')
-                                mixer.music.play()
-                                time.sleep(600 - timp)
+                                    print("test timp > n = 1")
+                                    print("NU ESTRE BINE ABSOLUT DELOC TE ROG INCETEAZA!!!!!!!")
+                                    time.sleep(timp - 600)
                         k += 2
                         i = 0
